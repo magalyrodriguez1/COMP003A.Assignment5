@@ -9,19 +9,17 @@ namespace COMP003A.Assignment5
     internal class Program
     {
         static void Main(string[] args)
-        {
-
-            PrintSeparator();
-            PrintSeparator("Triangle");
+        {           
+            PrintSeparator("Triangle Section");
             Console.WriteLine("Enter a single character: ");
             char inputCharacter = Convert.ToChar(Console.ReadLine());
 
             Console.Write("Enter a positive whole number: ");
             int size = Convert.ToInt32(Console.ReadLine());
-            /*
+            
             IsoscelesTriangleBuilder(inputCharacter, size);
-            PrintSeparator("Favorite Characters");
-            */
+            PrintSeparator("Favorite Characters Section");
+            
             CharacterInfo("Judy Hopps", 1992);
             CharacterInfo("Bree Van de Kamp", 1956);
             CharacterInfo("SpongeBob SquarePants", 1986);
@@ -37,26 +35,36 @@ namespace COMP003A.Assignment5
         /// <summary>
         /// PrintSeparator() with no return value and prints triangle section
         /// </summary>
-        /// <param name="param">string name</param>
-        static void PrintSeparator(string triangle)
+        /// <param name="message">string name</param>
+        static void PrintSeparator(string message)
         {
             PrintSeparator();
-            Console.WriteLine("Triangle Section");
+            Console.WriteLine(message);
+            PrintSeparator();
         }
 
-        /*static void IsoscelesTriangleBuilder(char inputCharacter, int size)
+        static void IsoscelesTriangleBuilder(char inputCharacter, int size)
         {
-            for (int i = 1; i < size; i++)
-            {
-                Console.WriteLine( i += inputCharacter);
+            for (int i = 1; i <= size; i++)
+            {   
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(inputCharacter);
+                }
+                Console.WriteLine();
             }
 
-            for (int i = -1; i < size; i--)
+            for (int i = size; i >= 1; i--)
             {
-                Console.WriteLine(i -= inputCharacter);
-            }
+               for (int j = i; j >= 1; j--)
+                { 
+                    Console.Write(inputCharacter);
+                }
+                Console.WriteLine();
+            }         
+           
         }
-        */
+        
         static int AgeCalculator(int year)
         {
             return 2024 - year;
