@@ -33,9 +33,10 @@ namespace COMP003A.Assignment5
         }
 
         /// <summary>
-        /// PrintSeparator() with no return value and prints triangle section
+        /// PrintSeparator() with no return value. calls method PrintSeparator() to print 50 '*'
+        /// and allows for strings to be executed
         /// </summary>
-        /// <param name="message">string name</param>
+        /// <param name="message"> the string name, to output a message</param>
         static void PrintSeparator(string message)
         {
             PrintSeparator();
@@ -43,6 +44,12 @@ namespace COMP003A.Assignment5
             PrintSeparator();
         }
 
+        /// <summary>
+        /// creates an isosceles triangle depending on user input and will output char depending on user input.
+        /// made using nested for loops
+        /// </summary>
+        /// <param name="inputCharacter">character input</param>
+        /// <param name="size"> size of the triangle input</param>
         static void IsoscelesTriangleBuilder(char inputCharacter, int size)
         {
             for (int i = 1; i <= size; i++)
@@ -65,11 +72,22 @@ namespace COMP003A.Assignment5
            
         }
         
+        /// <summary>
+        /// a calculator that calculates character's birthday. subtracts the current year (2024) with the user input
+        /// </summary>
+        /// <param name="year">year input.</param>
+        /// <returns>the age a character will turn</returns>
         static int AgeCalculator(int year)
         {
             return 2024 - year;
         }
 
+        /// <summary>
+        /// method that uses AgeCalculator(int year) method to output what age character will be turning.
+        /// Method will output the character's name and the age character turns.
+        /// </summary>
+        /// <param name="name"> name input</param>
+        /// <param name="birthYear"> birth year input</param>
         static void CharacterInfo(string name, int birthYear)
         {
             
